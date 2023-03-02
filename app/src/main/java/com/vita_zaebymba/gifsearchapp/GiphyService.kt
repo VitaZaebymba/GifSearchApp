@@ -11,4 +11,5 @@ interface GiphyService {
         @Query("limit") limit: Int = 25,
         @Query("offset") offset: Int = 0
     ): Response<GiphyApiResponse>
+
 }

@@ -50,9 +50,9 @@ dependencies {
 
 
     // Giphy SDK
-    implementation 'com.giphy.sdk:giphy-android-sdk-core:4.2.1'
-    implementation 'com.giphy.sdk:giphy-android-sdk-ui:1.0.0'
+    implementation group: 'com.giphy.sdk', name: 'ui', version: '2.3.1'
     implementation 'com.giphy.sdk:ui:2.3.1'
+
 
     // Retrofit for API requests
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

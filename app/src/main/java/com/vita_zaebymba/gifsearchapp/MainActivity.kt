@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val gifList: RecyclerView = findViewById(R.id.gif_list)
-        gifList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        gifList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         val adapter = GifAdapter(emptyList()) { gif ->
             val intent = Intent(this, GifDetailActivity::class.java)
