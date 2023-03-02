@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/GANSOR/Desktop/Kotlin_Android/GifSearchApp/app/src/main/res/layout/activity_gif_detail.xml" value="0.358695652173913" />
         <entry key="..\:/Users/GANSOR/Desktop/Kotlin_Android/GifSearchApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/GANSOR/Desktop/Kotlin_Android/GifSearchApp/app/src/main/res/layout/item_gif.xml" value="0.27049180327868855" />
       </map>
     </option>
   </component>
