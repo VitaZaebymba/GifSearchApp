@@ -42,8 +42,9 @@ class MainActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
                 lifecycleScope.launch {
-                    val query = s?.toString()?.trim() ?: ""
-                    val gifs = giphyClient.getTrendingGifs(query)
+                    val query = searchBar.text?.toString()?.trim() ?: ""
+                    //val gifs = giphyClient.getTrendingGifs(query)
+                    val gifs = giphyClient.searchGifs(query)
                     adapter.gifs = gifs
                     adapter.notifyDataSetChanged()
                 }
