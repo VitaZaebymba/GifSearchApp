@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = GifAdapter(emptyList()) { gif ->
             val intent = Intent(this, GifDetailActivity::class.java)
-            intent.putExtra(GifDetailActivity.EXTRA_GIF, gif as Serializable)
+            intent.putExtra(GifDetailActivity.EXTRA_GIF, gif.url)
             startActivity(intent)
         }
         gifList.adapter = adapter
@@ -34,4 +34,6 @@ class MainActivity : AppCompatActivity() {
             adapter.notifyDataSetChanged()
         }
     }
+
+    
 }

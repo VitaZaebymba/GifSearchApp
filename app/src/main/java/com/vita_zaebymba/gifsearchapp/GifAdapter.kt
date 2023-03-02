@@ -7,10 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class GifAdapter(
-    var gifs: List<Gif>,
-    private val onItemClick: (Gif) -> Unit
-) : RecyclerView.Adapter<GifAdapter.ViewHolder>() {
+class GifAdapter(var gifs: List<Gif>, private val onItemClick: (Gif) -> Unit) : RecyclerView.Adapter<GifAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val gifImage: ImageView = itemView.findViewById(R.id.gif_image)
