@@ -18,10 +18,10 @@ class GifDetailActivity : AppCompatActivity() {
         /*val gifId: TextView = findViewById(R.id.gif_id)
         gifId.text = gif.id*/
 
-        val gifTitle: TextView = findViewById(R.id.gif_title)
+        /*val gifTitle: TextView = findViewById(R.id.gif_title)
         gifTitle.text = gif.title
 
-        /*val gifUrl: TextView = findViewById(R.id.gif_url)
+        val gifUrl: TextView = findViewById(R.id.gif_url)
         gifUrl.text = gif.url
 
         val gifPreviewUrl: TextView = findViewById(R.id.gif_previewUrl)
