@@ -4,13 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.widget.EditText
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.launch
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
     private val giphyClient = GiphyClient()
@@ -30,25 +28,12 @@ class MainActivity : AppCompatActivity() {
         }
         gifList.adapter = adapter
 
-        val searchBar: EditText = findViewById(R.id.search_bar)
-        searchBar.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                // not needed
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // not needed
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                lifecycleScope.launch {
-                    val query = searchBar.text?.toString()?.trim() ?: ""
-                    //val gifs = giphyClient.getTrendingGifs(query)
-                    val gifs = giphyClient.searchGifs(query)
-                    adapter.gifs = gifs
-                    adapter.notifyDataSetChanged()
-                }
-            }
-        })
+        lifecycleScope.launch {
+            val gifs = giphyClient.getTrendingGifs()
+            adapter.gifs = gifs
+            adapter.notifyDataSetChanged()
+        }
     }
+
+
 }
