@@ -10,7 +10,7 @@ class GiphyClient {
         .baseUrl("https://api.giphy.com/v1/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-        .create(GiphyService::class.java)
+        .create(GiphyService::class.java) //
 
 
     suspend fun searchGifs(query: String): List<Gif> {
