@@ -1,4 +1,4 @@
-package com.vita_zaebymba.gifsearchapp
+package com.vita_zaebymba.gifsearchapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.vita_zaebymba.gifsearchapp.R
+import com.vita_zaebymba.gifsearchapp.data.Gif
 
 // класс для отображения списка GIF-изображений в RecyclerView
 class GifAdapter(var gifs: List<Gif>, private val onItemClick: (Gif) -> Unit) : RecyclerView.Adapter<GifAdapter.ViewHolder>() { // принимает список gif-изображений и функцию onItemClick, которая будет вызываться при нажатии на элемент списка

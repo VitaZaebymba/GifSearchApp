@@ -14,6 +14,14 @@ interface GiphyService { //для взаимодействия с API серви
         @Query("limit") limit: Int = 25,
         @Query("offset") offset: Int = 0,
 
+        ): Response<GiphyApiResponse>
+
+    @GET("gifs/search")
+    suspend fun getSearchGifs(
+        @Query("api_key") apiKey: String = BuildConfig.GIPHY_API_KEY,
+        @Query("q") q : String,
+        @Query("limit") limit: Int = 25,
+        @Query("offset") offset: Int = 0,
     ): Response<GiphyApiResponse>
 
 }
