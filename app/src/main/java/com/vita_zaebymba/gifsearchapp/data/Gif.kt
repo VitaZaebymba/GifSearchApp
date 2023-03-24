@@ -1,4 +1,4 @@
-package com.vita_zaebymba.gifsearchapp
+package com.vita_zaebymba.gifsearchapp.data
 
 data class Gif( //класс для хранения информации о GIF
     val id: String,
@@ -7,4 +7,4 @@ data class Gif( //класс для хранения информации о GIF
     val previewUrl: String,
     val width: Int,
     val height: Int
-)
+) : java.io.Serializable

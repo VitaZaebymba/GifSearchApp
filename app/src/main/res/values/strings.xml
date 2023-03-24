@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">GifSearchApp</string>
     <string name="search_gif">Search GIFs</string>
+    <string name="gif_id">Id : </string>
+    <string name="gif_title">Title : </string>
+    <string name="gif_url">Url : </string>
+    <string name="gif_previewUrl">Preview Url : </string>
+    <string name="gif_width">Width : </string>
+    <string name="gif_height">Height : </string>
+
 </resources>
