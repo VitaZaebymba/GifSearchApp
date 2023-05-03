@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        gifList = findViewById(R.id.gif_list) // полученные данные используются для заполнения RecyclerView, который отображает список GIF-изображений
+        gifList = findViewById(R.id.gif_list)
         editText = findViewById(R.id.search_bar)
         gifList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
