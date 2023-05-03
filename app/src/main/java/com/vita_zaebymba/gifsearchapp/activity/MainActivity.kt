@@ -27,13 +27,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-<<<<<<< HEAD
         gifList = findViewById(R.id.gif_list)
-=======
-        gifList =
-            findViewById(R.id.gif_list) // полученные данные используются для заполнения RecyclerView, который отображает список GIF-изображений
->>>>>>> cd6cb455b2fb7f64cd4c53be091dc609b34b8bdf
+        gifList = findViewById(R.id.gif_list) // полученные данные используются для заполнения RecyclerView, который отображает список GIF-изображений
         editText = findViewById(R.id.search_bar)
+
         gifList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         val adapter = GifAdapter(emptyList()) { gif ->
